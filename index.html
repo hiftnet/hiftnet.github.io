@@ -1,1 +1,323 @@
-test
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Audio Samples from HiFTNet</title>
+		<style>
+			div {
+			margin-bottom: 32px;
+			}
+			
+			.github.td {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			
+			#toc_container {
+			background: #f9f9f9 none repeat scroll 0 0;
+			border: 1px solid #aaa;
+			display: table;
+			font-size: 95%;
+			padding-top: 20px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 8px;
+			width: auto;
+			}
+			
+			#toc_container ul  {
+			  list-style: outside none none !important; margin-left: -40px;
+			}
+			
+			.ood {
+			width: 245px;
+			}
+			
+			
+		  
+		</style>
+	</head>
+	
+	<body>
+		<article>
+			<header>
+				<h1>Audio Samples from "HiFTNet: A Fast High-Quality Neural Vocoder with Harmonic-plus-Noise Filter and Inverse Short Time Fourier Transform"</h1>
+			</header>
+		</article>
+		
+		<div style="margin-bottom: 16px;" class="github">
+			<table>
+					<tbody>
+						<tr>
+							<td><a href="https://arxiv.org/abs/2301.08810">[arXiv]</a></td>
+							<td><a href="https://github.com/yl4579/PL-BERT">[GitHub Repo]</a></td>
+						</tr>
+					</tbody>
+			</table>
+		</div>
+		
+		
+		<div>
+			<b>Abstract:</b>  Recent advancements in speech synthesis have leveraged GAN-based networks like HiFi-GAN and BigVGAN to produce high-fidelity waveforms from mel-spectrograms. However, these networks are computationally expensive and parameter-heavy. iSTFTNet addresses these limitations by integrating inverse short-time Fourier transform (iSTFT) into the network, achieving both speed and parameter efficiency. In this paper, we introduce an extension to iSTFTNet, termed HiFTNet, which incorporates a harmonic-plus-noise source filter in the time-frequency domain that uses a sinusoidal source from the fundamental frequency (F0) inferred via a pre-trained F0 estimation network for fast inference speed. Subjective evaluations on LJSpeech show that our model significantly outperforms both iSTFTNet and HiFi-GAN, achieving ground-truth-level performance. HiFTNet also outperforms BigVGAN-base on LibriTTS for unseen speakers and achieves comparable performance to BigVGAN while being four times faster with only 1/6 of the parameters. Our work sets a new benchmark for efficient, high-quality neural vocoding, paving the way for real-time applications that demand high quality speech synthesis.				<p></p>
+			<hr>
+			<p>This page contains a set of audio samples in support of the paper. Some examples are randomly selected directly from the sets we used for evaluation.</p>
+			<p><b>All utterances were unseen during training, and the results are uncurated (NOT cherry-picked) unless otherwise specified. </b></p>
+			<p><b>It is highly recommended to listen to audio samples with headphones.</b> For more samples, please go to our survey used for CMOS evaluation <a href="https://survey.alchemer.com/s3/7456492/CMOS-gt-hnf-0731">here</a> and <a href="https://survey.alchemer.com/s3/7512214/new-CMOS-hnf-gt-other-b1-0910">here</a>. </p>
+
+
+		</div>
+		
+		<div>
+			<a name="lj"><h2>Single Speaker (LJSpeech)</h2></a>
+			<hr>
+			<table>
+				<tbody>
+				  <tr>
+					<th>Ground Truth</th>
+					<th>iSTFTNet (V1)</th>
+					<th>HiFi-GAN (V1)</th>
+					<th>HiFTNet</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/GT/LJ042-0017.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/iSTFTNet/LJ042-0017.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFiGAN/LJ042-0017.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFTNet/LJ042-0017.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/GT/LJ035-0162.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/iSTFTNet/LJ035-0162.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFiGAN/LJ035-0162.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFTNet/LJ035-0162.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/GT/LJ026-0039.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/iSTFTNet/LJ026-0039.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFiGAN/LJ026-0039.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFTNet/LJ026-0039.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/GT/LJ010-0233.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/iSTFTNet/LJ010-0233.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFiGAN/LJ010-0233.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFTNet/LJ010-0233.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/GT/LJ005-0202.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/iSTFTNet/LJ005-0202.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFiGAN/LJ005-0202.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/LJSpeech/HiFTNet/LJ005-0202.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+
+		</div>
+		
+		<div>
+			<a name="lj"><h2>Clean Unseen Speaker (LibriTTS <i>test-clean</i> subset)</h2></a>
+			<hr>
+			<table>
+				<tbody>
+				  <tr>
+					<th>Ground Truth</th>
+					<th>BigVGAN-base</th>
+					<th>BigVGAN</th>
+					<th>HiFTNet</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/GT/7729_102255_000016_000002.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN_base/7729_102255_000016_000002.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN/7729_102255_000016_000002.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/HiFTNet/7729_102255_000016_000002.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/GT/7176_88083_000017_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN_base/7176_88083_000017_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN/7176_88083_000017_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/HiFTNet/7176_88083_000017_000005.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/GT/5142_33396_000045_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN_base/5142_33396_000045_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN/5142_33396_000045_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/HiFTNet/5142_33396_000045_000000.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/GT/2961_961_000005_000004.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN_base/2961_961_000005_000004.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN/2961_961_000005_000004.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/HiFTNet/2961_961_000005_000004.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/GT/237_126133_000047_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN_base/237_126133_000047_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/BIGVGAN/237_126133_000047_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-clean/HiFTNet/237_126133_000047_000000.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div>
+			<a name="lj"><h2>Noisy Unseen Speaker (LibriTTS <i>test-other</i> subset)</h2></a>
+			<hr>
+			<table>
+				<tbody>
+				  <tr>
+					<th>Ground Truth</th>
+					<th>BigVGAN-base</th>
+					<th>BigVGAN</th>
+					<th>HiFTNet</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/GT/7975_280085_000006_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN_base/7975_280085_000006_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN/7975_280085_000006_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/HiFTNet/7975_280085_000006_000000.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/GT/5764_299665_000134_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN_base/5764_299665_000134_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN/5764_299665_000134_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/HiFTNet/5764_299665_000134_000005.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/GT/4350_10919_000003_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN_base/4350_10919_000003_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN/4350_10919_000003_000005.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/HiFTNet/4350_10919_000003_000005.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/GT/3997_180294_000006_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN_base/3997_180294_000006_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN/3997_180294_000006_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/HiFTNet/3997_180294_000006_000000.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/GT/1688_142285_000046_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN_base/1688_142285_000046_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/BIGVGAN/1688_142285_000046_000000.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/test-other/HiFTNet/1688_142285_000046_000000.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<div>
+			<a name="lj"><h2>Robustness to Out-Of-Distribution (OOD) Audios</h2></a>
+			<hr>
+			<p>The following audio samples are sourced from the <a href="https://bigvgan-demo.github.io/">BIgVGAN demo page</a> to demostrate that HiFTNet is as robust as BigVGAN for zero-shot waveform synthesis when trained on the LibriTTS dataset. It is able to perform well under various OOD conditions, such as noisy speech, unseen languages, and in-the-wild Youtube audio. </p>
+			<table>
+				<tbody>
+				  <tr>
+					<th>Ground Truth</th>
+					<th>HiFi-GAN (V1)</th>
+					<th>BigVGAN-base</th>
+					<th>BigVGAN</th>
+					<th>HiFTNet</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/GT/media1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFiGAN/media1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN_base/media1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN/media1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFTNet/media1.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/GT/celeb1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFiGAN/celeb1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN_base/celeb1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN/celeb1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFTNet/celeb1.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/GT/celeb2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFiGAN/celeb2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN_base/celeb2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN/celeb2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFTNet/celeb2.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/GT/noisytedx1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFiGAN/noisytedx1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN_base/noisytedx1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN/noisytedx1.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFTNet/noisytedx1.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/GT/noisytedx2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFiGAN/noisytedx2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN_base/noisytedx2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/BIGVGAN/noisytedx2.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/OOD/HiFTNet/noisytedx2.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+
+		</div>
+		
+		<div>
+			<a name="as"><h2>Ablation Study</h2></a>
+			<hr>
+			<table> 
+				<tbody>
+				  <tr>
+					<th>Ground Truth</th>
+					<th>HiFTNet (Proposed)</th>
+					<th>w/o hn-NSF</th>
+					<th>w/o STFT</th>
+					<th>w/o Snake</th>
+					<th>w/o LSTM</th>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/GT/LJ050-0277.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/baseline/LJ050-0277.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nohnf/LJ050-0277.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nostft/LJ050-0277.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nosnake/LJ050-0277.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nolstm/LJ050-0277.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/GT/LJ042-0161.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/baseline/LJ042-0161.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nohnf/LJ042-0161.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nostft/LJ042-0161.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nosnake/LJ042-0161.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nolstm/LJ042-0161.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/GT/LJ038-0212.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/baseline/LJ038-0212.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nohnf/LJ038-0212.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nostft/LJ038-0212.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nosnake/LJ038-0212.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nolstm/LJ038-0212.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/GT/LJ016-0443.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/baseline/LJ016-0443.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nohnf/LJ016-0443.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nostft/LJ016-0443.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nosnake/LJ016-0443.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nolstm/LJ016-0443.wav"></audio></td>
+				  </tr>
+				  <tr>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/GT/LJ002-0149.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/baseline/LJ002-0149.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nohnf/LJ002-0149.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nostft/LJ002-0149.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nosnake/LJ002-0149.wav"></audio></td>
+					<td><audio controls preload="none" class="ood"><source src="wavs/ablation/nolstm/LJ002-0149.wav"></audio></td>
+				  </tr>
+				</tbody>
+			</table>
+			
+			
+		</div>
+		
+	</body>
+	
+
+</html>
